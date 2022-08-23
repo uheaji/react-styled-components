@@ -20,6 +20,10 @@ const rotationAnimation = keyframes`
   }
 `;
 
+const Emoji = styled.span`
+  font-size: 36px;
+`;
+
 const Box = styled.div`
   height: 200px;
   width: 200px;
@@ -28,23 +32,19 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   animation: ${rotationAnimation} 1s linear infinite; // 1초동안 선형 무한 속성값주기
-  span {
-    font-size: 26px;
-    &:hover {
-      font-size: 36px;
+  ${Emoji}:hover {
+      font-size: 98px;
     }
-    &:active {
-      opacity: 0;
-    }
-  }
+  
 `;
 
 function App() {
   return (
     <Container>
       <Box>
-        <span>🤩</span>
+        <Emoji>🤩</Emoji>
       </Box>
+      <Emoji>💕</Emoji>
     </Container>
   );
 }
